@@ -11,14 +11,66 @@
 .d-block{
    display: block;
 }
-
-
-/* main style */
-body{
-   background-color: #1f1f1f;
+.container{
+   margin: 30px auto;
+   width: 1200px;
 }
-
-/* form section style */
+.smal-container{
+   margin: 30px auto;
+   width: 800px;
+}
+/* hero style */
+div.hero{
+   margin-top: 20px;
+   text-align: center;
+}
+/* form style */
 .form-container{
-   background-image: ;
+   background-color: rgb(60, 60, 60);
+   background-size: cover;
+   border-radius: 30px;
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+.form{
+   background-color: rgba(0, 0, 0, 0.806);
+   border-radius: 30px;
+   padding: 30px;
+   text-align: center;
+}
+.form .input{
+   margin-bottom: 20px;
+}
+
+.input #name-input, #km-input, #age-select{
+   padding: 10px;
+   border: none;
+   border-radius: 10px;
+}
+.btn button{
+   padding: 10px;
+   border-radius: 10px;
+   border: none;
+}
+.btn button:hover{
+   background-color: #d0d0d0;
+}
+
+/* ticket style */
+div.ticket{
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   background-color: #e4e4e4;
+   padding: 10px;
+   height: 200px;
+   border: 2px solid black;
+   border-radius: 10px;
+}
+.ticket h3{
+   margin-bottom: 20px;
+}
+

@@ -7,30 +7,46 @@
    <title>BIGLIETTO DEL TRENO</title>
 </head>
 <body>
-   <section class="form-container">
-      <form action="#" id="form">
-         <div>
-            <input type="text" placeholder="Nome Completo" id="name-input" required>
-            <input type="text" placeholder="KM che vuoi percorrere" id="km-input" required>
-            <select id="age-select" required>
-               <option value="">Seleziona un'età</option>
-               <option value="Minorenne" id="minor">Minorenne</option>
-               <option value="Adulto" id="adult">Maggiorenne</option>
-               <option value="Anziano" id="elderly">Over 65 anni</option>
-            </select>
-         </div>
-         <div>
-            <button id="send-btn">Genera il biglietto</button>
-         </div>
-      </form>
+   <div class="hero">
+      <h1>Calcola il prezzo del tuo biglietto</h1>
+   </div>
+   <section class="container">
+      <div class="form-container">
+         <form action="#" id="form" class="form">
+            <div class="input">
+               <input type="text" placeholder="Nome Completo" id="name-input" required>
+               <input type="text" placeholder="KM che vuoi percorrere" id="km-input" required>
+               <select id="age-select" required>
+                  <option value="">Seleziona un'età</option>
+                  <option value="Minorenne" id="minor">Minorenne</option>
+                  <option value="Adulto" id="adult">Maggiorenne</option>
+                  <option value="Anziano" id="elderly">Over 65 anni</option>
+               </select>
+            </div>
+            <div class="btn">
+               <button id="send-btn">GENERA</button>
+               <button id="reset-btn">ANNULLA</button>
+            </div>
+         </form>
+      </div>
    </section>
-   <hr>
-   <section class="ticket-container d-none">
-      <div id="name">Nome del paseggero</div>
-      <div id="age">età del paseggero</div>
-      <div id="route-km">km che vuole percorrere</div>
-      <div id="final-price">prezzo totale</div>
-      
+
+   <section class="smal-container ticket-container d-none">
+      <div class="ticket">
+         <div class="user-info">
+            <h3>Informazioni sul passeggero</h3>
+            <span id="name">Nome</span>
+            <span id="age">Età</span>
+         </div>
+         <div class="route-info">
+            <h3>Chilometri tratta</h3>
+            <span id="route-km">Km</span>
+         </div>
+         <div class="price-info">
+            <h3>Prezzo totale</h3>
+            <span id="final-price">Prezzo</span>
+         </div>
+      </div>
    </section>
 
 

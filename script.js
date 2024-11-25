@@ -3,7 +3,8 @@ const passengerName = document.getElementById('name-input');
 const kmRoute = document.getElementById('km-input');
 const passengerAge = document.getElementById('age-select');
 const form = document.getElementById('form');
-const ticketContainer = document.querySelector('.ticket-container')
+const ticketContainer = document.querySelector('.ticket-container');
+
 //salvo i dati del form in delle variabili:
 const pageName = document.getElementById('name');
 const pageAge = document.getElementById('age');
@@ -41,17 +42,16 @@ form.addEventListener('submit', (send) => {
 
    //stampo in pagina
    pageName.innerText = passengerName.value;
-   pageAge.innerText = passengerAge.value;
+   pageAge.innerText = `(${passengerAge.value})`;
    pagekm.innerText = `${km} km`;
-   pageFinalPrice.innerText = prezzoFinale.toFixed(2);
+   pageFinalPrice.innerText = `${prezzoFinale.toFixed(2)}€`;
 
    //appare il biglietto in pagina
    ticketContainer.classList.add('d-block');
    //resetto gli il form
    resetForm()
 })
-
-
+//funzione per il reset
 function resetForm(){
    passengerName.value = '';
    passengerAge.value = '';
