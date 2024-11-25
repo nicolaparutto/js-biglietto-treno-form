@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/style.css">
+   <title>BIGLIETTO DEL TRENO</title>
+</head>
+<body>
+   <section class="form-container">
+      <form action="#" id="form">
+         <div>
+            <input type="text" placeholder="Nome Completo" id="name-input">
+            <input type="text" placeholder="KM che vuoi percorrere" id="km-input">
+            <select id="age-select">
+               <option value="">Seleziona un'età</option>
+               <option value="Minor" id="minor">Minorenne</option>
+               <option value="Adult" id="adult">Maggiorenne</option>
+               <option value="Elderly" id="elderly">Over 65 anni</option>
+            </select>
+         </div>
+         <div>
+            <button id="send-btn">Genera il biglietto</button>
+         </div>
+      </form>
+   </section>
+   <hr>
+   <section class="ticket-container">
+      <div id="name">Nome del paseggero</div>
+      <div id="age">età del paseggero</div>
+      <div id="route-km">km che vuole percorrere</div>
+      <div id="final-price">prezzo totale</div>
+      
+   </section>
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>
