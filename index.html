@@ -3,20 +3,20 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="assets/style.css">
+   <link rel="stylesheet" href="assets/css/style.css">
    <title>BIGLIETTO DEL TRENO</title>
 </head>
 <body>
    <section class="form-container">
       <form action="#" id="form">
          <div>
-            <input type="text" placeholder="Nome Completo" id="name-input">
-            <input type="text" placeholder="KM che vuoi percorrere" id="km-input">
-            <select id="age-select">
+            <input type="text" placeholder="Nome Completo" id="name-input" required>
+            <input type="text" placeholder="KM che vuoi percorrere" id="km-input" required>
+            <select id="age-select" required>
                <option value="">Seleziona un'età</option>
-               <option value="Minor" id="minor">Minorenne</option>
-               <option value="Adult" id="adult">Maggiorenne</option>
-               <option value="Elderly" id="elderly">Over 65 anni</option>
+               <option value="Minorenne" id="minor">Minorenne</option>
+               <option value="Adulto" id="adult">Maggiorenne</option>
+               <option value="Anziano" id="elderly">Over 65 anni</option>
             </select>
          </div>
          <div>
@@ -25,7 +25,7 @@
       </form>
    </section>
    <hr>
-   <section class="ticket-container">
+   <section class="ticket-container d-none">
       <div id="name">Nome del paseggero</div>
       <div id="age">età del paseggero</div>
       <div id="route-km">km che vuole percorrere</div>
