@@ -5,7 +5,7 @@ const passengerAge = document.getElementById('age-select');
 const form = document.getElementById('form');
 const ticketContainer = document.querySelector('.ticket-container');
 
-//salvo i dati del form in delle variabili:
+//imposto le variabili che poi verranno valorizzate e stampate in pagina:
 const pageName = document.getElementById('name');
 const pageAge = document.getElementById('age');
 const pagekm = document.getElementById('route-km');
@@ -20,15 +20,18 @@ const discountOver = 40;
 
 form.addEventListener('submit', (send) => {
    send.preventDefault();
+
    //salvo in due variabili la selezione dell'età e i km indicati da percorrere.
    const age = passengerAge.value;
    const km = kmRoute.value;
+
    //calcolo del prezzo base:
    const prezzoBase = km * prezzoKm;
+
    //dichiaro una variabile che conterrà il prezzo finale:
    let prezzoFinale;
 
-   //calcolo dello sconto sulle varie età
+   //calcolo dello sconto sulle varie età:
    if (age == 'Minorenne'){
       const sconto = prezzoBase * (discountMinorenne / 100);
       prezzoFinale = prezzoBase - sconto;
@@ -38,20 +41,21 @@ form.addEventListener('submit', (send) => {
    } else{
       prezzoFinale = prezzoBase;
    }
-   console.log(prezzoFinale.toFixed(2));
 
-   //stampo in pagina
+   //stampo in pagina:
    pageName.innerText = passengerName.value;
    pageAge.innerText = `(${passengerAge.value})`;
    pagekm.innerText = `${km} km`;
    pageFinalPrice.innerText = `${prezzoFinale.toFixed(2)}€`;
 
-   //appare il biglietto in pagina
+   //appare il biglietto in pagina:
    ticketContainer.classList.add('d-block');
-   //resetto gli il form
+
+   //resetto gli il form:
    resetForm()
-})
-//funzione per il reset
+});
+
+//funzione per il reset:
 function resetForm(){
    passengerName.value = '';
    passengerAge.value = '';
