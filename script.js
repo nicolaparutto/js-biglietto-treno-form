@@ -4,7 +4,7 @@ const kmRoute = document.getElementById('km-input');
 const passengerAge = document.getElementById('age-select');
 const form = document.getElementById('form');
 const ticketContainer = document.querySelector('.ticket-container');
-
+const btnReset = document.getElementById('reset-btn');
 //imposto le variabili che poi verranno valorizzate e stampate in pagina:
 const pageName = document.getElementById('name');
 const pageAge = document.getElementById('age');
@@ -18,8 +18,8 @@ const discountOver = 40;
 
 
 
-form.addEventListener('submit', (send) => {
-   send.preventDefault();
+form.addEventListener('submit', (event) => {
+   event.preventDefault();
 
    //salvo in due variabili la selezione dell'età e i km indicati da percorrere.
    const age = passengerAge.value;
@@ -51,9 +51,9 @@ form.addEventListener('submit', (send) => {
    //appare il biglietto in pagina:
    ticketContainer.classList.add('d-block');
 
-   //resetto gli il form:
-   resetForm()
 });
+
+btnReset.addEventListener('click', resetForm());
 
 //funzione per il reset:
 function resetForm(){
